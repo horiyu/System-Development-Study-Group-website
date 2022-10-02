@@ -122,6 +122,22 @@
   height: 100%;
 }
 
+.sns>div {
+  background-color: #fff717;
+  color: #000000;
+  padding: 50px 10vw;
+  text-align: center;
+  display: flex;
+}
+
+.sns h1 {
+  color: #fff717;
+}
+
+.sns>div>div {
+  width: 50%;
+}
+
 .faq>div {
   /* display: flex; */
   background-color: #04DB82;

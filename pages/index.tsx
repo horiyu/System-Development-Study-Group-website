@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+const YouTubeID = '9RLetJEf8zw';
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -71,40 +73,55 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        {/* <div className={styles.recommend}>
-          <p>こんにちは。これは例です。</p>
-        </div> */}
-
         <section className={styles.works}>
           <h1>WORKS</h1>
           <div>
             <h2>LEGO®</h2>
             <div className={styles.video}>
-              <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw?controls=0&loop=1&playlist=jNQXAC9IVRw&rel=0&cc_load_policy=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameBorder={0}></iframe>
+              <iframe src={'https://www.youtube.com/embed/' + YouTubeID + '?controls=0&loop=1&playlist=' + YouTubeID + '&rel=0&cc_load_policy=0'} title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' frameBorder={0}></iframe>
             </div>
           </div>
           <div>
             <h2>ハンドベル自動演奏機</h2>
             <div className={styles.video}>
-              <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw?controls=0&loop=1&playlist=jNQXAC9IVRw&rel=0&cc_load_policy=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameBorder={0}></iframe>
+              <iframe src={'https://www.youtube.com/embed/' + YouTubeID + '?controls=0&loop=1&playlist=' + YouTubeID + '&rel=0&cc_load_policy=0'} title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' frameBorder={0}></iframe>
             </div>
           </div>
           <div>
             <h2>LEDキューブ</h2>
             <div className={styles.video}>
-              <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw?controls=0&loop=1&playlist=jNQXAC9IVRw&rel=0&cc_load_policy=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameBorder={0}></iframe>
+              <iframe src={'https://www.youtube.com/embed/' + YouTubeID + '?controls=0&loop=1&playlist=' + YouTubeID + '&rel=0&cc_load_policy=0'} title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' frameBorder={0}></iframe>
             </div>
           </div>
           <div>
             <h2>LEDキューブ</h2>
             <div className={styles.video}>
-              <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw?controls=0&loop=1&playlist=jNQXAC9IVRw&rel=0&cc_load_policy=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameBorder={0}></iframe>
+              <iframe src='https://www.youtube.com/embed/jNQXAC9IVRw?controls=0&loop=1&playlist=jNQXAC9IVRw&rel=0&cc_load_policy=0' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' frameBorder={0}></iframe>
             </div>
           </div>
         </section>
 
+        <section className={styles.sns}>
+          <h1>SNS</h1>
+          <div>
+            <div>
+              <a href="https://twitter.com/shisukenNara" target="_blank" rel="noopener noreferrer">
+                <h2>Twitter</h2>
+                <Image src="/img/twitter_icon.png" alt="Twitter" width={103.4} height={85.1} />
+              </a>
+            </div>
+            <div>
+              <a href="https://www.youtube.com/channel/UCPuD_HHegzOzxVqpPANwCSA" target="_blank" rel="noopener noreferrer">
+                <h2>YouTube</h2>
+                <Image src="/img/youtube_icon.png" alt="Twitter" width={102.4} height={72.1} />
+              </a>
+            </div>
+          </div>
+        </section>
+
+
         <section className={styles.faq}>
-          <h1> FAQ</h1>
+          <h1>FAQ</h1>
           <div>
             <h2>部員は何人ですか</h2>
             <p>一年生　人。ニ年生　人。三年生　人。四年生　人。計11人です。</p>
@@ -118,57 +135,10 @@ const Home: NextPage = () => {
             <p>電子制御工学科棟4F、電子工学実験室です。</p>
           </div>
         </section>
-
-        {/* <video src=""></video> */}
-
-        {/* <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p> */}
-
-        {/* <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div> */}
       </main>
 
       <footer className={styles.footer}>
         <p>© システム開発研究会 All rIghts reserved.</p>
-        {/* <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a> */}
       </footer>
     </div >
   )
