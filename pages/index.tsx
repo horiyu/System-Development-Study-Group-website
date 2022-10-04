@@ -3,7 +3,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-const YouTubeID = '9RLetJEf8zw';
+// const YouTubeID = ['9RLetJEf8zw', 'SHOuMbVYNts'];
+
+const YouTubeID = [
+  { id: 'x9vojqVxzxk', title: '8×8×8LEDキューブを動かしてみた！' },
+  { id: 'fo_ALwNCK58', title: 'LEDキューブとドットマトリクスを作ってみた！' },
+  { id: 'UJEuH_7XrIk', title: 'LEGO Mindstorms EV3' },
+  { id: 'SHOuMbVYNts', title: 'ハンドベル' },
+];
 
 const Home: NextPage = () => {
   return (
@@ -40,14 +47,13 @@ const Home: NextPage = () => {
             <div className={styles.info}>
               <hr />
               <div>
-                {/* <span className="material-symbols-outlined">group</span> */}
                 <h2>部員数</h2>
-                <p>11人</p>
+                <p>13人</p>
               </div>
               <hr />
               <div>
                 <h2>活動日</h2>
-                <p>放課後 (水曜日、金曜日) </p>
+                <p>放課後 (水曜日、木曜日) </p>
               </div>
               <hr />
               <div>
@@ -75,30 +81,15 @@ const Home: NextPage = () => {
 
         <section className={styles.works}>
           <h1>WORKS</h1>
-          <div>
-            <h2>LEGO®</h2>
-            <div className={styles.video}>
-              <iframe src={'https://www.youtube.com/embed/' + YouTubeID + '?controls=0&loop=1&playlist=' + YouTubeID + '&rel=0&cc_load_policy=0'} title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' frameBorder={0}></iframe>
+
+          {YouTubeID.map((value, index) => (
+            <div key={index}>
+              <h2>{value.title}</h2>
+              <div className={styles.video}>
+                <iframe src={'https://www.youtube.com/embed/' + value.id + '?loop=1&playlist=' + value.id + '&rel=0&cc_load_policy=0'} title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' frameBorder={0}></iframe>
+              </div>
             </div>
-          </div>
-          <div>
-            <h2>ハンドベル自動演奏機</h2>
-            <div className={styles.video}>
-              <iframe src={'https://www.youtube.com/embed/' + YouTubeID + '?controls=0&loop=1&playlist=' + YouTubeID + '&rel=0&cc_load_policy=0'} title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' frameBorder={0}></iframe>
-            </div>
-          </div>
-          <div>
-            <h2>LEDキューブ</h2>
-            <div className={styles.video}>
-              <iframe src={'https://www.youtube.com/embed/' + YouTubeID + '?controls=0&loop=1&playlist=' + YouTubeID + '&rel=0&cc_load_policy=0'} title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' frameBorder={0}></iframe>
-            </div>
-          </div>
-          <div>
-            <h2>LEDキューブ</h2>
-            <div className={styles.video}>
-              <iframe src='https://www.youtube.com/embed/jNQXAC9IVRw?controls=0&loop=1&playlist=jNQXAC9IVRw&rel=0&cc_load_policy=0' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' frameBorder={0}></iframe>
-            </div>
-          </div>
+          ))}
         </section>
 
         <section className={styles.sns}>
@@ -123,12 +114,17 @@ const Home: NextPage = () => {
         <section className={styles.faq}>
           <h1>FAQ</h1>
           <div>
-            <h2>部員は何人ですか</h2>
-            <p>一年生　人。ニ年生　人。三年生　人。四年生　人。計11人です。</p>
+            <h2>活動内容を教えてください</h2>
+            <p>WROへの出場を視野に、LEGO®MINDSORMS® を用いたロボット製作をはじめ、電子工作やプログラミングをしています。</p>
+          </div>
+          <div>
+            <h2>出場する大会は何ですか</h2>
+            <p>WROに出場します。昨年はデザインを競う建築系のコンテストに出場し、今年はボックスカートのコンテストにも出場予定です。部員の日頃の成果を発揮できる場を提供できるよう尽力中です!
+            </p>
           </div>
           <div>
             <h2>活動日はいつですか</h2>
-            <p>水曜日と金曜日の放課後です。</p>
+            <p>水曜日と木曜日の放課後です。</p>
           </div>
           <div>
             <h2>活動場所はどこですか</h2>
