@@ -81,7 +81,7 @@
 }
 
 .about .recommend h2 {
-  margin: auto;
+  margin: 0 auto 5vmin;
 }
 
 .recommend>div {

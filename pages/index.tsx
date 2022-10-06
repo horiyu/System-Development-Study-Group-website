@@ -3,13 +3,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-// const YouTubeID = ['9RLetJEf8zw', 'SHOuMbVYNts'];
-
 const YouTubeID = [
   { id: 'x9vojqVxzxk', title: '8×8×8LEDキューブを動かしてみた！' },
   { id: 'fo_ALwNCK58', title: 'LEDキューブとドットマトリクスを作ってみた！' },
   { id: 'UJEuH_7XrIk', title: 'LEGO Mindstorms EV3' },
   { id: 'SHOuMbVYNts', title: 'ハンドベル' },
+];
+
+const faq = [
+  { question: '活動内容を教えてください', answer: 'WROへの出場を視野に、LEGO®MINDSORMS® を用いたロボット製作をはじめ、電子工作やプログラミングをしています。' },
+  { question: '出場する大会は何ですか', answer: 'WROに出場します。昨年はデザインを競う建築系のコンテストに出場し、今年はボックスカートのコンテストにも出場予定です。部員の日頃の成果を発揮できる場を提供できるよう尽力中です!' },
+  { question: '活動日はいつですか', answer: '水曜日と木曜日の放課後です。' },
+  { question: '活動場所はどこですか', answer: '活動場所はどこですか' },
 ];
 
 const Home: NextPage = () => {
@@ -81,7 +86,6 @@ const Home: NextPage = () => {
 
         <section className={styles.works}>
           <h1>WORKS</h1>
-
           {YouTubeID.map((value, index) => (
             <div key={index}>
               <h2>{value.title}</h2>
@@ -113,23 +117,12 @@ const Home: NextPage = () => {
 
         <section className={styles.faq}>
           <h1>FAQ</h1>
-          <div>
-            <h2>活動内容を教えてください</h2>
-            <p>WROへの出場を視野に、LEGO®MINDSORMS® を用いたロボット製作をはじめ、電子工作やプログラミングをしています。</p>
-          </div>
-          <div>
-            <h2>出場する大会は何ですか</h2>
-            <p>WROに出場します。昨年はデザインを競う建築系のコンテストに出場し、今年はボックスカートのコンテストにも出場予定です。部員の日頃の成果を発揮できる場を提供できるよう尽力中です!
-            </p>
-          </div>
-          <div>
-            <h2>活動日はいつですか</h2>
-            <p>水曜日と木曜日の放課後です。</p>
-          </div>
-          <div>
-            <h2>活動場所はどこですか</h2>
-            <p>電子制御工学科棟4F、電子工学実験室です。</p>
-          </div>
+          {faq.map((value, index) => (
+            <div key={index}>
+              <h2>{value.question}</h2>
+              <p>{value.answer}</p>
+            </div>
+          ))}
         </section>
       </main>
 
